@@ -1,4 +1,6 @@
 import { Router } from "express";
 import indexPage from "./pages/index";
 
-export default Router().get("/", indexPage);
+const router = Router();
+router.get("/", indexPage);
+export default router;

@@ -1,4 +1,5 @@
 import customScript from "./customScript.js";
+import customMarko from "./customMarko.marko";
 
 <app-layout>
   <@head>
@@ -6,8 +7,8 @@ import customScript from "./customScript.js";
   </@head>
   <@body>
   <p>${customScript()}</p>
-    <h1>
-      Hello World
-    </h1>
+  <h1>Hello World</h1>
+  <customMarko/>
+  <my-template />
   </@body>
 </app-layout>

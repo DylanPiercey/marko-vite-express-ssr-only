@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 const dist = fs.readdirSync("./dist");
 
 (async () => {
-  const app = express().use(markoMiddleware());
+  const app = express().use(markoMiddleware.default()); // Kommer antagligen komma en ny release som löser det här
 
   if (isProd) {
     app
