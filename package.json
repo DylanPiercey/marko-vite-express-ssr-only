@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "type": "module",
   "dependencies": {
-    "@marko/express": "^2.0.0",
+    "@marko/express": "^1.0.0",
+    "exp-config": "^4.2.0",
     "express": "^4.18.1",
+    "express-winston": "^4.2.0",
     "glob": "^8.0.3",
-    "marko": "^5.21.2"
+    "marko": "^5.21.2",
+    "winston": "^3.8.1"
   },
   "devDependencies": {
     "@marko/compiler": "^5.21.6",
@@ -16,8 +19,8 @@
   "private": true,
   "scripts": {
     "build": "NODE_ENV=production vite build --ssr src/index.js",
-    "dev": "node --enable-source-maps index.js",
-    "dev:inspect": "node --inspect --enable-source-maps index.js",
-    "start": "NODE_ENV=production node --enable-source-maps index.js"
+    "dev": "mkdir -p dist && node --enable-source-maps app.js",
+    "dev:inspect": "node --inspect --enable-source-maps app.js",
+    "start": "NODE_ENV=production node --enable-source-maps app.js"
   }
 }
